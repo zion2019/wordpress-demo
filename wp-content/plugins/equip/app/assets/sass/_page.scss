@@ -1,0 +1,138 @@
+//
+// Options Page General Layout
+// --------------------------------------------------
+.equip-page {
+  position: relative;
+  overflow: hidden;
+  .equip-page-inner {
+    display: table;
+    width: 100%;
+
+    // Main Content
+    .equip-content {
+      display: table-cell;
+      vertical-align: top;
+      background-color: $page-content-bg;
+      padding: 20px 15px 20px 25px;
+    }
+
+    // Sidebar
+    .equip-sidebar {
+      display: table-cell;
+      vertical-align: top;
+      width: $page-sidebar-width;
+      color: $page-sidebar-color;
+      background-color: $page-sidebar-bg;
+      > * {
+        color: $page-sidebar-color;
+      }
+      @media #{$tablet-port} {
+        width: $page-sidebar-collapsed-width;
+      }
+    }
+  }
+
+  // Footer
+  .equip-footer {
+    position: relative;
+    > .footer-inner {
+      position: relative;
+      height: $page-footer-height;
+      background-color: $page-footer-bg;
+      bottom: 0;
+      padding: 11px 0;
+      @include box-sizing(border-box);
+      > * {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      > * {
+        color: $page-footer-color;
+      }
+    }
+    &.stuck {
+      height: $page-footer-height;
+      z-index: $page-footer-zindex;
+      > .footer-inner {
+        position: fixed;
+        bottom: 0;
+      }
+    }
+    .equip-btn-group {
+      position: absolute;
+      top: floor(($page-footer-height - ($btn-height - 4)) / 2);
+      right: 15px;
+      .equip-btn {
+        margin-left: 6px;
+        > i {
+          margin-right: 3px;
+        }
+        @media #{$tablet-port} {
+          > span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Logo
+.equip-logo {
+  display: block;
+  width: $logo-width;
+  margin-left: 15px;
+  padding: 4px 0;
+  > .logo-mobile {
+    display: none;
+  }
+  @media #{$tablet-port} {
+    width: $logo-mobile-width;
+    > .logo-desktop {
+      display: none;
+    }
+    > .logo-mobile {
+      display: block;
+    }
+  }
+}
+
+// Project Name
+.equip-project-name {
+  color: $page-sidebar-color;
+  padding: 15px 15px 20px 15px;
+  h1, h2, h3, h4,
+  h5, h6, p, span {
+    color: $page-sidebar-color;
+    margin-bottom: 0;
+  }
+  h1, h2 {
+    font-weight: $font-weight-h2;
+    letter-spacing: 0.04em;
+  }
+  h1 {
+    font-size: $font-size-h2;
+  }
+  @media #{$tablet-port} {
+    display: none;
+  }
+}
+
+// Anchor Section
+.equip-anchor {
+  margin: {
+    top: -(floor($line-height-computed * 1.5));
+    right: -15px;
+    bottom: floor($line-height-computed * 1.5);
+    left: -25px;
+  }
+  padding: {
+    top: floor($line-height-computed * 1.5);
+    right: 15px;
+    bottom: floor($line-height-computed / 1.5);
+    left: 25px;
+  }
+  &:nth-of-type(even) {
+    background-color: #f6f6f6;
+  }
+}

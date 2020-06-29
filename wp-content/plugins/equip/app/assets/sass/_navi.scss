@@ -1,0 +1,235 @@
+//
+// Side Navigation: Tabs, Scrollspy, Anchored Navigation
+// ------------------------------------------------------
+
+// Navi container
+.equip-navi {
+  z-index: 0;
+  width: $page-sidebar-width;
+  @include calc(height, "100% - #{$page-footer-height} - 80px");
+  padding-bottom: 15px;
+  overflow-y: auto;
+  &.stuck {
+    position: fixed;
+    top: 30px;
+  }
+  @media #{$tablet-port} {
+    width: $page-sidebar-collapsed-width;
+    &.stuck {
+      position: relative;
+      top: auto;
+    }
+  }
+}
+
+// Navi scrollbar
+.equip-navi::-webkit-scrollbar {
+  width: 6px;
+}
+
+.equip-navi::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.equip-navi::-webkit-scrollbar-thumb {
+  background-color: $gray;
+}
+
+// Tabs - top-level menu
+.equip-navi .nav-tabs {
+  display: block;
+  margin: 0;
+  padding: 0 0 30px 0;
+  list-style: none;
+  border: none;
+  @include clearfix;
+  > li {
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+    border-top: 1px solid $subnavi-bg;
+    &:last-child {
+      border-bottom: 1px solid $subnavi-bg;
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      line-height: $line-height-base;
+      @include user-select(none);
+      @include backface-visibility(hidden);
+      @include transition(all .3s);
+      &:hover,
+      &:focus {
+        @include box-shadow(none);
+        text-decoration: none;
+        outline: none;
+      }
+    }
+    > a {
+      font-size: $navi-font-size;
+      color: $navi-link-color;
+      padding: 13px 15px;
+      > i {
+        font-size: $navi-icon-size;
+        margin-right: 6px;
+        line-height: 1.1;
+        opacity: .6;
+        transition: opacity .3s;
+      }
+      &:hover {
+        color: $navi-link-hover-color;
+        background-color: $navi-link-hover-bg;
+        > i {
+          opacity: 1;
+        }
+      }
+    }
+    .sub-navi {
+      background-color: $subnavi-bg;
+      margin: 0;
+      padding: 0;
+      max-height: 0px;
+      overflow: hidden;
+      opacity: 0;
+      @include transition(all .4s ease-out);
+      > li {
+        > a {
+          font-size: $subnavi-font-size;
+          color: $subnavi-link-color;
+          padding: 6px 15px 6px ($navi-icon-size);
+          border-left: 4px solid transparent;
+          &:hover, &.active {
+            color: $subnavi-link-hover-color;
+            border-left-color: $subnavi-link-hover-border;
+          }
+        }
+      }
+    }
+
+    // Active state, and its :hover to override normal :hover
+    &.active {
+      z-index: 5;
+      > a {
+        &,
+        &:hover {
+          color: $navi-link-color;
+          background-color: $navi-link-active-bg;
+          @include box-shadow(none);
+          cursor: default;
+        }
+        > i {
+          opacity: 1;
+        }
+      }
+      .sub-navi {
+        max-height: 600px;
+        padding: 13px 0;
+        opacity: 1;
+      }
+    }
+  }
+  @media #{$tablet-port} {
+    > li {
+      > a > span {
+        display: none;
+      }
+      > a > i {
+        margin: 0;
+      }
+      .sub-navi {
+        display: none;
+      }
+    }
+  }
+}
+
+// Tabbable tabs
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
+  }
+}
+
+// Component Animations
+.transition {
+  &.fade {
+    opacity: 0;
+    @include transition(all .4s ease-in-out);
+    @include backface-visibility(hidden);
+    &.in {
+      opacity: 1;
+    }
+  }
+}
+
+// Tabs in Metaboxes
+.postbox .nav-tabs {
+  margin: {
+    top: -26px;
+    left: -12px;
+    right: -12px;
+  }
+}
+
+.equip-tabs .nav-tabs {
+  display: block;
+  background-color: $gray-darker;
+  margin-bottom: 35px;
+  @include clearfix;
+  > li {
+    display: block;
+    float: left;
+    margin: 0;
+    > a {
+      position: relative;
+      display: block;
+      padding: 20px 30px;
+      color: #fff;
+      font-size: $font-size-large;
+      text-decoration: none;
+      letter-spacing: .05em;
+      font-weight: 300;
+      border-right: 1px solid $gray-dark;
+      @include transition(all .3s);
+      &:focus, &:active {
+        outline: none;
+        box-shadow: none;
+      }
+      &:after {
+        top: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        z-index: 1;
+        pointer-events: none;
+        border-color: transparent;
+        border-top-color: $brand-primary;
+        border-width: 9px;
+        margin-left: -9px;
+        opacity: 0;
+        @include transform(translateY(-10px));
+        @include transition(all .2s);
+      }
+    }
+    &:hover > a {
+      background-color: $gray-dark;
+    }
+    &.active > a {
+      background-color: $brand-primary;
+      cursor: default;
+      &:after {
+        opacity: 1;
+        @include transform(translateY(0));
+      }
+    }
+    &.active:hover > a {
+      background-color: $brand-primary;
+    }
+  }
+}

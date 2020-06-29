@@ -1,0 +1,37 @@
+//
+// Color Picker
+// --------------------------------------------------
+
+.equip-field .sp-replacer {
+  border: $input-border;
+  padding: 6px;
+  border-radius: $border-radius-base;
+  background-color: #fff;
+  &:hover {
+    border-color: $brand-primary;
+  }
+  &.sp-active {
+    border: $input-border;
+    border-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.equip-field .sp-preview {
+  width: 45px;
+  height: 30px;
+  border: $input-border;
+  border-radius: $border-radius-base;
+}
+
+.equip-field .sp-dd {
+  padding: 7px 4px !important;
+}
+
+.sp-container {
+  border: $input-border !important;
+  background-color: #fff !important;
+  border-radius: $border-radius-base !important;
+  border-top-left-radius: 0 !important;
+}

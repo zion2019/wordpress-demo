@@ -1,0 +1,31 @@
+//
+// Select
+// ---------------------------------------------------------
+
+select.form-control::-ms-expand {
+  display: none;
+}
+
+.equip-select-wrap {
+  position: relative;
+  border-radius: $border-radius-base;
+  background-color: #fff;
+  select {
+    position: relative;
+    z-index: 2;
+    background: 0;
+  }
+  &:before {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    font-family: dashicons;
+    top: 50%;
+    right: 12px;
+    line-height: 1;
+    margin-top: -($select-icon-size / 2);
+    content: "\f140";
+    font-size: $select-icon-size;
+    color: $input-font-color;
+  }
+}

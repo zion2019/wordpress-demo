@@ -1,0 +1,18 @@
+{
+  "autoload": {
+    "psr-4": {
+      "Equip\\": "app/",
+      "Equip\\Module\\": "app/modules/",
+      "Equip\\Field\\": "app/fields/",
+      "Equip\\Engine\\": "app/engines/",
+      "Equip\\Layout\\": "app/layouts/",
+      "Equip\\Service\\": "app/services/",
+      "Equip\\Misc\\": "app/misc/",
+      "Equip\\Extension\\": "extensions/"
+    }
+  },
+  "require": {
+    "myclabs/deep-copy": "^1.5",
+    "leafo/scssphp": "^0.6.7"
+  }
+}

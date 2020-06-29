@@ -1,0 +1,122 @@
+//
+// Grid system based on Neat framework
+// http://neat.bourbon.io/
+// --------------------------------------------------
+
+.equip-row {
+  @include row();
+}
+
+.equip-col-1 {
+  @include span-columns(1);
+}
+
+.equip-col-2 {
+  @include span-columns(2);
+}
+
+.equip-col-3 {
+  @include span-columns(3);
+}
+
+.equip-col-4 {
+  @include span-columns(4);
+}
+
+.equip-col-5 {
+  @include span-columns(5);
+}
+
+.equip-col-6 {
+  @include span-columns(6);
+}
+
+.equip-col-7 {
+  @include span-columns(7);
+}
+
+.equip-col-8 {
+  @include span-columns(8);
+}
+
+.equip-col-9 {
+  @include span-columns(9);
+}
+
+.equip-col-10 {
+  @include span-columns(10);
+}
+
+.equip-col-11 {
+  @include span-columns(11);
+}
+
+.equip-col-12 {
+  @include span-columns(12);
+}
+
+.equip-offset-1, .equip-offset-2,
+.equip-offset-3, .equip-offset-4,
+.equip-offset-5, .equip-offset-6,
+.equip-offset-7, .equip-offset-8,
+.equip-offset-9, .equip-offset-10,
+.equip-offset-11, .equip-offset-12 {
+  height: 1px;
+}
+
+.equip-offset-1 {
+  @include span-columns(1);
+}
+
+.equip-offset-2 {
+  @include span-columns(2);
+}
+
+.equip-offset-3 {
+  @include span-columns(3);
+}
+
+.equip-offset-4 {
+  @include span-columns(4);
+}
+
+.equip-offset-5 {
+  @include span-columns(5);
+}
+
+.equip-offset-6 {
+  @include span-columns(6);
+}
+
+.equip-offset-7 {
+  @include span-columns(7);
+}
+
+.equip-offset-8 {
+  @include span-columns(8);
+}
+
+.equip-offset-9 {
+  @include span-columns(9);
+}
+
+.equip-offset-10 {
+  @include span-columns(10);
+}
+
+.equip-offset-11 {
+  @include span-columns(11);
+}
+
+.equip-offset-12 {
+  @include span-columns(12);
+}
+
+@media #{$desktop} {
+  [class^="equip-col"],
+  [class*="equip-col"],
+  [class^="equip-offset"],
+  [class*="equip-offset"] {
+    @include span-columns(12);
+  }
+}

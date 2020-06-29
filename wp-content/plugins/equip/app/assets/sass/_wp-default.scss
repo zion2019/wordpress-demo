@@ -1,0 +1,30 @@
+//
+// WordPress Default Styles
+// --------------------------------------------------
+
+.widgets-holder-wrap .widget-inside {
+  padding-top: 12px;
+}
+
+.search-box input[type="search"] {
+  box-sizing: border-box;
+}
+
+.menu-item-settings > * {
+  float: none !important;
+}
+
+.menu-item-actions {
+  @include clearfix;
+}
+
+.postbox .inside .equip-container {
+  padding-top: 20px;
+}
+
+@media screen and (max-width: 782px) {
+  .equip-field select {
+    height: $input-height !important;
+    font-size: $input-font-size !important;
+  }
+}

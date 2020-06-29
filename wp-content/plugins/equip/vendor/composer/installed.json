@@ -1,0 +1,101 @@
+[
+  {
+    "name": "myclabs/deep-copy",
+    "version": "1.5.1",
+    "version_normalized": "1.5.1.0",
+    "source": {
+      "type": "git",
+      "url": "https://github.com/myclabs/DeepCopy.git",
+      "reference": "a8773992b362b58498eed24bf85005f363c34771"
+    },
+    "dist": {
+      "type": "zip",
+      "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/a8773992b362b58498eed24bf85005f363c34771",
+      "reference": "a8773992b362b58498eed24bf85005f363c34771",
+      "shasum": ""
+    },
+    "require": {
+      "php": ">=5.4.0"
+    },
+    "require-dev": {
+      "doctrine/collections": "1.*",
+      "phpunit/phpunit": "~4.1"
+    },
+    "time": "2015-11-20T12:04:31+00:00",
+    "type": "library",
+    "installation-source": "dist",
+    "autoload": {
+      "psr-4": {
+        "DeepCopy\\": "src/DeepCopy/"
+      }
+    },
+    "notification-url": "https://packagist.org/downloads/",
+    "license": [
+      "MIT"
+    ],
+    "description": "Create deep copies (clones) of your objects",
+    "homepage": "https://github.com/myclabs/DeepCopy",
+    "keywords": [
+      "clone",
+      "copy",
+      "duplicate",
+      "object",
+      "object graph"
+    ]
+  },
+  {
+    "name": "leafo/scssphp",
+    "version": "v0.6.7",
+    "version_normalized": "0.6.7.0",
+    "source": {
+      "type": "git",
+      "url": "https://github.com/leafo/scssphp.git",
+      "reference": "562213cd803e42ea53b0735554794c4022d8db89"
+    },
+    "dist": {
+      "type": "zip",
+      "url": "https://api.github.com/repos/leafo/scssphp/zipball/562213cd803e42ea53b0735554794c4022d8db89",
+      "reference": "562213cd803e42ea53b0735554794c4022d8db89",
+      "shasum": ""
+    },
+    "require": {
+      "php": ">=5.4.0"
+    },
+    "require-dev": {
+      "kherge/box": "~2.5",
+      "phpunit/phpunit": "~3.7",
+      "squizlabs/php_codesniffer": "~2.5"
+    },
+    "time": "2017-02-23T05:07:33+00:00",
+    "bin": [
+      "bin/pscss"
+    ],
+    "type": "library",
+    "installation-source": "dist",
+    "autoload": {
+      "psr-4": {
+        "Leafo\\ScssPhp\\": "src/"
+      }
+    },
+    "notification-url": "https://packagist.org/downloads/",
+    "license": [
+      "MIT"
+    ],
+    "authors": [
+      {
+        "name": "Leaf Corcoran",
+        "email": "leafot@gmail.com",
+        "homepage": "http://leafo.net"
+      }
+    ],
+    "description": "scssphp is a compiler for SCSS written in PHP.",
+    "homepage": "http://leafo.github.io/scssphp/",
+    "keywords": [
+      "css",
+      "less",
+      "sass",
+      "scss",
+      "stylesheet"
+    ]
+  }
+]

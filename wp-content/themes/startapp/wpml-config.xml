@@ -1,0 +1,33 @@
+<wpml-config>
+    <custom-fields>
+        <custom-field action="ignore">_startapp_page_settings</custom-field>
+        <custom-field action="ignore">_startapp_related</custom-field>
+        <custom-field action="translate">_startapp_classes_atts</custom-field>
+        <custom-field action="translate">_startapp_portfolio_description</custom-field>
+        <custom-field action="translate">_startapp_plan_button</custom-field>
+        <custom-field action="translate">_startapp_testimonial_button</custom-field>
+        <custom-field action="translate">_startapp_testimonial_settings</custom-field>
+    </custom-fields>
+    <custom-types>
+        <custom-type translate="1">startapp_classes</custom-type>
+        <custom-type translate="1">startapp_portfolio</custom-type>
+        <custom-type translate="1">startapp_pricing</custom-type>
+        <custom-type translate="0">startapp_testimonial</custom-type>
+        <custom-type translate="1">startapp_timeline</custom-type>
+    </custom-types>
+    <taxonomies>
+        <taxonomy translate="1">startapp_pricing_properties</taxonomy>
+        <taxonomy translate="1">startapp_timeline_milestone</taxonomy>
+        <taxonomy translate="1">startapp_timeline_category</taxonomy>
+        <taxonomy translate="1">startapp_portfolio_category</taxonomy>
+    </taxonomies>
+    <admin-texts>
+        <key name="startapp_options">
+            <key name="header_topbar_info"/>
+            <key name="header_contacts_info"/>
+            <key name="header_contacts_address"/>
+            <key name="header_contacts_time"/>
+            <key name="footer_copyright"/>
+        </key>
+    </admin-texts>
+</wpml-config>

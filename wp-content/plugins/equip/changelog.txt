@@ -1,0 +1,3 @@
+0.7.22
+
+- fix bug with wrong option names in CssExtension::reset() method
